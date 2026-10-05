@@ -1,0 +1,166 @@
+.services {
+  position: relative;
+  z-index: 1;
+  padding: 100px 24px;
+  background: #f8fafc;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.services-heading {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.services-label {
+  margin: 0 0 14px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #2563eb;
+}
+
+.services-heading h2 {
+  margin: 0;
+
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  color: #111827;
+}
+
+.services-heading h2 span {
+  color: #2563eb;
+}
+
+.services-heading > p:last-child {
+  max-width: 620px;
+  margin: 20px auto 0;
+
+  font-size: 17px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+/* Services Grid */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  padding: 30px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: #bfdbfe;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.1);
+}
+
+/* Number */
+
+.service-number {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 12px;
+  background: #eff6ff;
+
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.service-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 20px;
+  line-height: 1.4;
+  color: #111827;
+}
+
+.service-card p {
+  margin: 0 0 24px;
+
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6b7280;
+}
+
+.service-card button {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.service-card button:hover {
+  color: #1d4ed8;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .services {
+    padding: 70px 20px;
+  }
+
+  .services-heading {
+    margin-bottom: 40px;
+  }
+
+  .services-heading h2 {
+    font-size: 34px;
+  }
+
+  .services-heading > p:last-child {
+    font-size: 16px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 26px;
+  }
+}

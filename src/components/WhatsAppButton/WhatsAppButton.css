@@ -1,0 +1,26 @@
+.whatsapp-button {
+    padding: 11px 20px;
+
+    border: 1px solid #16a34a;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #16a34a;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.whatsapp-button:hover {
+    background: #16a34a;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
