@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./WorkerForm.css";
 import ReviewModal from "../ReviewModal/ReviewModal";
 import SuccessModal from "../SuccessModal/SuccessModal";
+import Loading from "../Loading/Loading";
 
 export default function WorkerForm() {
     const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ export default function WorkerForm() {
         endDate: "",
         amount: ""
     });
+    const [loading, setLoading] = useState(false);
     const [showReview, setShowReview] = useState(false);
     const [errors, setErrors] = useState({});
     const [showSuccess, setShowSuccess] = useState(false);
@@ -200,12 +202,14 @@ export default function WorkerForm() {
 
     const handleConfirmSubmit = async () => {
         try {
+            setLoading(true);
             await saveRequirement();
-
             setShowReview(false);
             handleClear();
             setShowSuccess(true);
+            setLoading(false);
         } catch (error) {
+            setLoading(false);
             console.error("Error submitting requirement:", error);
             alert("Unable to submit your requirement. Please try again.");
         }
@@ -230,6 +234,7 @@ export default function WorkerForm() {
 
     return (
         <section className="worker-form-section" id="worker-form">
+          {loading && <Loading />}
             <div className="worker-form-container">
 
                 <div className="worker-form-heading">
