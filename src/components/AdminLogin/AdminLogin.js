@@ -3,17 +3,19 @@
 import { useState } from "react";
 import AdminDashboard from "@/components/AdminDashboard/AdminDashboard";
 import "./AdminLogin.css";
+import Loading from "../Loading/Loading";
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function handleLogin(event) {
     event.preventDefault();
+    setLoading(true);
     setError("");
-
     try {
       const response = await fetch("/api/admin/login", {
         method: "POST",
@@ -30,14 +32,19 @@ export default function AdminLogin() {
 
       if (!response.ok) {
         setError(data.message || "Invalid username or password.");
+        setLoading(false);
         return;
       }
 
       setIsLoggedIn(true);
+      setLoading(false);
       setPassword("");
     } catch (error) {
       console.error("Admin login failed:", error);
       setError("Unable to connect to the server. Please try again.");
+      setLoading(false);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -47,6 +54,7 @@ export default function AdminLogin() {
 
   return (
     <main className="admin-login">
+       {loading && <Loading />}
       <section className="admin-login__card">
         <div className="admin-login__logo">A</div>
 
