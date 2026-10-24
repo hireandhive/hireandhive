@@ -1,3 +1,4 @@
+
 "use client";
 
 import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
@@ -12,12 +13,13 @@ export default function Hero() {
         <h1>
           Find the Right
           <span> Workers </span>
-          for Your Job
+          for Every Job
         </h1>
 
         <p className="hero-description">
-          Tell us what kind of workers you need, and we’ll help you find
-          the right people for your work.
+          Looking for workers for your business, project, or
+          daily work? Tell us your requirements, and we’ll help
+          you find suitable workers for different types of jobs.
         </p>
 
         <div className="hero-actions">

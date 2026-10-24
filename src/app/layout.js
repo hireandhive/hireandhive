@@ -12,8 +12,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Hire and Hive",
-  description: "Hire and Hive",
+  metadataBase: new URL("https://www.hireandhive.com"),
+
+  title: "Hire Workers in Bengaluru | Hire & Hive",
+
+  description:
+    "Find workers for general labour, loading, cleaning, construction and other jobs in Bengaluru. Share your requirements with Hire & Hive.",
+
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -1,3 +1,4 @@
+
 "use client";
 
 import "./Services.css";
@@ -6,57 +7,57 @@ export default function Services() {
   const services = [
     {
       number: "01",
-      title: "Event Setup & Decoration",
+      title: "General Labour Workers",
       description:
-        "Get workers for stage setup, decoration, chairs, tables, and venue arrangements.",
+        "Find workers for general labour, physical tasks, daily work, and other workforce requirements.",
     },
     {
       number: "02",
-      title: "Catering & Serving Staff",
+      title: "Loading & Unloading Workers",
       description:
-        "Find workers for food serving, table assistance, kitchen support, and event catering.",
+        "Hire workers to load, unload, move, and arrange goods, materials, equipment, and furniture.",
     },
     {
       number: "03",
-      title: "Loading & Unloading",
+      title: "Construction Workers",
       description:
-        "Workers to load, unload, move, and arrange event materials, equipment, and furniture.",
+        "Find workers for construction assistance, site support, material handling, and related tasks.",
     },
     {
       number: "04",
-      title: "Event Cleanup",
+      title: "Cleaning Workers",
       description:
-        "Get support for cleaning and organizing the venue before or after your event.",
+        "Get workers for cleaning homes, offices, commercial spaces, and other work locations.",
     },
     {
       number: "05",
-      title: "General Event Support",
+      title: "Event & Catering Staff",
       description:
-        "Workers for guest assistance, arrangements, and other event-day support requirements.",
+        "Find workers for event setup, food serving, kitchen assistance, decoration, and cleanup.",
     },
     {
       number: "06",
-      title: "Venue Support",
+      title: "Warehouse & Packing Workers",
       description:
-        "Get workers for chair and table arrangements, seating areas, entry setup, and other venue support tasks.",
+        "Hire workers for packing, sorting, stock handling, organizing goods, and warehouse support.",
     },
   ];
 
   return (
     <section className="services" id="services">
       <div className="services-container">
-
         <div className="services-heading">
           <p className="services-label">OUR SERVICES</p>
 
           <h2>
-            Workers for every
-            <span> event need</span>
+            Find Workers for
+            <span> Every Type of Job</span>
           </h2>
 
           <p>
-            Whether you need help with setup, serving, moving materials,
-            or cleanup, find the workers you need for your event.
+            From general labour and construction to cleaning,
+            loading, packing, and event support, Hire & Hive
+            helps you find suitable workers for your needs.
           </p>
         </div>
 
@@ -83,7 +84,6 @@ export default function Services() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
