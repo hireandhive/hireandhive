@@ -428,7 +428,7 @@ export default function WorkerForm() {
                             Clear Form
                         </button>
                         <button type="submit">
-                            Submit Requirement →
+                            Submit
                         </button>
                     </div>
 

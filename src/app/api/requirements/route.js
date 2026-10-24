@@ -30,3 +30,20 @@ export async function POST(request) {
         );
     }
 }
+
+export async function GET() {
+  try {
+    await connectDB();
+
+    const requirements = await Requirement.find({});
+
+    return Response.json(requirements);
+  } catch (error) {
+    console.error("Failed to fetch requirements:", error);
+
+    return Response.json(
+      { message: "Failed to fetch requirements" },
+      { status: 500 }
+    );
+  }
+}
